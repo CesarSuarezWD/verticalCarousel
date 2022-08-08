@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img {
+  position: absolute;
+  width: 964px;
+  height: 964px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  overflow: hidden;
+  left: 43vw;
+}
+  
+.img img {
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.img-stripe {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.img .img-stripe {
+  width: calc(50% - 15px);
+  margin: 12px;
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+
+  .img .stripe1 {
+    animation: stripe-one 30s ease 0s infinite;
   }
-  to {
-    transform: rotate(360deg);
+
+  @keyframes stripe-one {
+    50%{
+      transform: translateY(-80vh);
+    }
   }
+  
+  .img .stripe2 {
+    transform: translateY(-80vh);
+    animation: stripe-two 30s ease 0s infinite;
+  }
+  
+  @keyframes stripe-two {
+    50%{
+      transform: translateY(0%);
+    }
+  }
+  
+  .img .stripe3 {
+    animation: stripe-one 35s ease 0s infinite;
+  }
+  
+  @keyframes stripe-three {
+    50%{
+      transform: translateY(-80vh);
+    }
+  }  
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+
+  .img .stripe1 {
+    animation: stripe-one 30s ease 0s infinite;
+  }
+
+  @keyframes stripe-one {
+    50%{
+      transform: translateY(-110vh);
+    }
+  }
+  
+  .img .stripe2 {
+    transform: translateY(-110vh);
+    animation: stripe-two 30s ease 0s infinite;
+  }
+  
+  @keyframes stripe-two {
+    50%{
+      transform: translateY(0%);
+    }
+  }
+  
+  .img .stripe3 {
+    animation: stripe-one 35s ease 0s infinite;
+  }
+  
+  @keyframes stripe-three {
+    50%{
+      transform: translateY(-110vh);
+    }
+  }  
+}
+
+
+@media only screen and (min-width: 1920px) and (max-width: 3840px) {
+
+  .img .stripe1 {
+    animation: stripe-one 30s ease 0s infinite;
+  }
+
+  @keyframes stripe-one {
+    50%{
+      transform: translateY(-110vh);
+    }
+  }
+  
+  .img .stripe2 {
+    transform: translateY(-110vh);
+    animation: stripe-two 30s ease 0s infinite;
+  }
+  
+  @keyframes stripe-two {
+    50%{
+      transform: translateY(0%);
+    }
+  }
+  
+  .img .stripe3 {
+    animation: stripe-one 35s ease 0s infinite;
+  }
+  
+  @keyframes stripe-three {
+    50%{
+      transform: translateY(-110vh);
+    }
+  }  
 }
